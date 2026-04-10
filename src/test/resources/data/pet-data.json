@@ -1,0 +1,9 @@
+{
+  "successfulPetFlow": {
+    "id": 987654321,
+    "name": "Firulais",
+    "updatedName": "Firulais-Vendido",
+    "status": "available",
+    "updatedStatus": "sold"
+  }
+}

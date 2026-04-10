@@ -1,0 +1,24 @@
+CONCLUSIONES - PRUEBAS DE API 
+
+1. Se validaron exitosamente las operaciones principales de la API PetStore, incluyendo creación, consulta, actualización y búsqueda de recursos.
+
+2. Los escenarios cubren:
+* Creación de una mascota (POST)
+* Consulta por ID (GET)
+* Actualización de datos (PUT)
+* Consulta por estado (GET)
+
+Esto asegura la validación del flujo completo CRUD de la API.
+
+3. Se realizaron validaciones sobre:
+* Códigos de respuesta HTTP
+* Estructura del response
+* Consistencia de datos
+* Uso de variables dinámicas (ID)
+
+4. La API responde correctamente a las operaciones realizadas
+
+5. No se evidenciaron errores en los endpoints evaluados
+
+6. Las pruebas de API permiten validar la lógica del negocio de forma rápida y eficiente, detectando errores antes de que impacten las capas superiores (UI).
+
