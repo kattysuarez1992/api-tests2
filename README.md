@@ -1,81 +1,61 @@
-# QA Technical Challenge
+# Pruebas de API con Karate
 
-Repositorio con la solución del reto técnico de QA, compuesto por:
+## Descripción
 
-- Automatización E2E con **Serenity BDD + Screenplay**
-- Pruebas de API con **Karate Framework**
+Este proyecto contiene pruebas automatizadas de API utilizando **Karate DSL**.
 
----
+## Herramientas y Tecnologías
 
-## Tecnologías utilizadas
+* **Karate DSL**
+* **Java**
+* **Maven**
 
-- Java 17
-- Gradle 7.6.1
-- Maven 3.9.12
-- Serenity BDD
-- Screenplay Pattern
-- Karate Framework
-- Microsoft Edge WebDriver 146
 
----
-
-## Requisitos
-
-- JDK: 17
-- Gradle: 7.6.1
-- Maven: 3.9.12
-
-> Nota: El proyecto fue desarrollado y probado con JDK 17.  
-> Es importante ejecutar las pruebas con esta versión para garantizar compatibilidad.
-
----
-
-## Estructura del proyecto
+## Estructura del Proyecto
 
 ```text
-qa-technical-challenge
-├── e2e-ui
-└── api-tests2
+api-tests2/
+├── src/
+│   ├── test/
+│   │   ├── java/
+│   │   └── resources/
+├── pom.xml
+├── README.md
+└── .gitignore
+```
 
-1. Proyecto E2E - Serenity BDD
+## Prerrequisitos
 
-Ruta: e2e-ui
+Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
-Flujo automatizado
-Se automatizó el flujo de compra en SauceDemo, cubriendo:
+* **Java JDK 17** 
+* **Apache Maven 3.9 **
+* **Git**
 
-Inicio de sesión con usuario válido
-Se agregan dos productos al carrito
-Visualización del carrito
-Se completan datos en formulario de compra
-Finalizar compra
-Se muestra mensaje final de confirmación
+## Ejecución de las Pruebas
 
-Para su ejecución:
-Ejecutar el runner: PurchaseRunner.java
+### Opción 1: Ejecutar todas las pruebas
 
-Ruta del Reporte
-El reporte de Serenity se genera en: e2e-ui/target/site/serenity/index.html
+Desde la terminal, en la raíz del proyecto:
 
-2. Proyecto API - Karate Framework
+```bash
+mvn test
+```
 
-Ruta: api-tests2
+### Opción 2: Ejecutar desde el IDE
 
-Flujo automatizado
-Se implementaron pruebas sobre la API de PetStore, cubriendo:
+Puedes ejecutar los runners de pruebas directamente desde tu entorno de desarrollo (IntelliJ, Eclipse, VS Code).
 
-Creación de una mascota
-Consultar mascota por ID
-Actualizar nombre y estado de la mascota
-Consultar mascota por estado
+## Validaciones Implementadas
 
-Para su ejecución
+Las pruebas permiten validar:
 
-Abrir el proyecto api-tests2 y ejecutar: TestRunner.java
+* Códigos de respuesta HTTP
+* Estructura y contenido de la respuesta
+* Datos retornados por la API
+* Comportamiento funcional del servicio
 
-Ruta del Reporte
-api-tests2/target/karate-reports/karate-summary.html
+## Consideraciones
 
-Consideraciones
-Para el proyecto E2E se utilizó Microsoft Edge debido a un problema del navegador Chrome con un popup de seguridad de contraseñas.
-Se utilizó Java 17 por compatibilidad con Serenity BDD y Karate Framework.
+* Los escenarios están escritos en formato legible utilizando Karate DSL.
+* El proyecto está estructurado para facilitar su mantenimiento y escalabilidad.
